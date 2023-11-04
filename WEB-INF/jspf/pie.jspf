@@ -1,0 +1,36 @@
+<%@ page pageEncoding="UTF-8" %>
+<footer class="custom-footer py-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h4>Contacto</h4>
+                <hr>
+                <ul class="list-unstyled">
+                    <li>+(51) 987654321</li>
+                    <li>(01) 286-5155</li>
+                    <li>vrnaturista@gmail.com</li>
+                    <li>vrcontacto@hotmail.com</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h4>Políticas y Términos</h4>
+                <hr>
+                <ul class="list-unstyled">
+                    <li><a href="terminos.jsp">Términos y condiciones</a></li>
+                    <li><a href="politicas.jsp">Política de privacidad</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h4>Redes Sociales</h4>
+                <hr>
+                <ul class="list-unstyled social-icons">
+                    <li><a href="#"><i class="bi bi-facebook"></i> Facebook</a></li>
+                    <li><a href="#"><i class="bi bi-twitter"></i> Twitter</a></li>
+                    <li><a href="#"><i class="bi bi-instagram"></i> Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p>&copy; 2023 VR Naturista. Todos los derechos reservados.</p>
+    </div>
+</footer>

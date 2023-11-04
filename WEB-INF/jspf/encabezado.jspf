@@ -1,0 +1,121 @@
+<%@ page pageEncoding="UTF-8" %>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border border-bottom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.jsp"><img src="imagenes/logo.png" style="width: 120px;"> VR Naturista</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
+                <ul class="navbar-nav" style="text-align: left">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.jsp">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.jsp">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Controlador?accion=productos">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cita.jsp">Agendar Cita</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
+                <ul class="navbar-nav" style="text-align: left">
+                    <li class="nav-item">
+                        <% 
+                        String nombreUsuario = (String) session.getAttribute("nombreUsuario");
+                        String nombreAdministrador = (String) session.getAttribute("nombreAdministrador");
+                        String nombreProveedor = (String) session.getAttribute("nombreProveedor");
+                        
+                        if (nombreUsuario != null && !nombreUsuario.isEmpty()) {
+                        %>
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                            <i class="bi bi-person-fill"></i><span> <%= nombreUsuario %></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="Controlador?accion=Perfil">
+                                    <span>Perfil</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="Controlador?accion=MostrarCompras">
+                                    <span>Compras</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="logout">
+                                    <span>Cerrar sesión</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <% 
+                           } else if (nombreAdministrador != null && !nombreAdministrador.isEmpty()) {
+                        %>
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                            <i class="bi bi-person-fill"></i><span> <%= nombreAdministrador %></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="Controlador?accion=AdministradorUsuarios">
+                                    <span>Usuarios</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="Controlador?accion=AdministradorProductos">
+                                    <span>Productos</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="Controlador?accion=Pedido">
+                                    <span>Solicitar Productos</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="logout">
+                                    <span>Cerrar sesión</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <% 
+                           }else if (nombreProveedor != null && !nombreProveedor.isEmpty()) {
+                        %>
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                            <i class="bi bi-person-fill"></i><span> <%= nombreProveedor %></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="Controlador?accion=ProveedorPedidos">
+                                    <span>Pedidos</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="logout">
+                                    <span>Cerrar sesión</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <% 
+                           } else{
+                        %>
+                        <a class="nav-link login-link" href="login.jsp">
+                            <i class="bi bi-person-fill"></i><span> Iniciar sesión</span>
+                        </a>
+                        <% 
+                           }
+                        %>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link login-link" href="Controlador?accion=Carrito">
+                            <i class="bi bi-cart3"><span class="position-absolute top-0 start-50 badge rounded-pill bg-info">${contador}</span></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
