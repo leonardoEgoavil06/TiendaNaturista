@@ -1,0 +1,131 @@
+
+.img{
+    width: 50%;
+}
+.navbar {
+    background-color: #ff6600;
+    border-radius: 0;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.navbar-toggler-icon {
+    background-color: #fff;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 20px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.container-fluid{
+    padding: 0 20px;
+}
+
+.contact-info {
+    text-align: right;
+}
+.carousel-inner {
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+
+.navbar-collapse .navbar-nav .nav-item{
+    position: relative;
+}
+
+
+.container{
+    margin-bottom: 5px;
+}
+.contact-info p{
+    color: white
+}
+.container .row{
+    margin-bottom: 10px;
+}
+
+
+
+
+.custom-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.custom-footer h4 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.custom-footer hr {
+    border-top: 1px solid #fff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.custom-footer ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+
+.custom-footer ul li {
+    margin-bottom: 5px;
+}
+
+.custom-footer a {
+    color: #ff6600;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+
+.custom-footer a:hover {
+    color: black;
+}
+
+
+.social-icons i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+
+.custom-footer p {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+}
+.container .row li a{
+    color: white;
+}
+.container .row li a:hover{
+    color: aqua;
+}
+
+.navbar .nav-item .nav-link badge{
+    color: black;
+}
